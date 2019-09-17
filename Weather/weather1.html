@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#submit").click(function(){
+    var city= $("#city").val()
+    $.get("https://api.openweathermap.org/data/2.5/weather?q= "+city+" &appid=7fecff555d03787322e5aa20232870c7", function(data){
+                var temp = data.main.temp;
+                var name = data.name;
+                var City = document.getElementById("city");
+                var Temperature = document.getElementById("Temperature");
+                alert("City: " + name +"\nTemperature: " + temp);
+
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+    <select id="city">
+        <option>select City</option>
+        <option id="Hyderabad" value="Hyderabad">Hyderabad</option>
+        <option id="Bangalore" value="Bangalore">Bangalore</option>
+        <option id="Mumbai" value="Mumbai">Mumbai</option>
+        <option id="Chennai" value="Chennai">Chennai</option>
+        <input type="submit" id="submit"  value="submit">
+       </select>
+<p id= "City"></p>
+<p id= "Temperature"></p>
+</body>
+</html>

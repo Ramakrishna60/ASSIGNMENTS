@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; 
+  -webkit-animation-duration: 4s; 
+  animation-name: example;
+  animation-duration: 9s;
+  border-radius:25px;
+}
+
+
+@-webkit-keyframes example {
+  0%   {background-color:pink; left:0px; top:0px;}
+  25%  {background-color:yellow; left:1500px; top:0px;}
+  50%  {background-color:blue; left:1500px; top:690px;}
+  75%  {background-color:green; left:0px; top:690px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+
+@keyframes example {
+  0%   {background-color:pink; left:0px; top:0px;}
+  25%  {background-color:yellow; left:1500px; top:0px;}
+  50%  {background-color:blue; left:1500px; top:690px;}
+  75%  {background-color:green; left:0px; top:690px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<p><b></b></p>
+
+<div></div>
+
+</body>
+</html>
