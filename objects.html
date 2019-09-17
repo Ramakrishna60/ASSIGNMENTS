@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            function book(){
+                var firstName ="raja";
+                var obj={
+                "getfirstName":function(){
+                    return firstName;
+
+                },
+                "setfirstName":function(name){
+                    firstName =name;
+                }
+                };
+                return obj;
+            }
+            var lang =book();
+            console.log(lang.getfirstName());
+            lang.setfirstName("Rama");
+            console.log(lang.getfirstName());
+            </script>
+    </body>
+</html>
