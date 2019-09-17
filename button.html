@@ -1,0 +1,28 @@
+<html>
+       <head>
+          
+       </head>    
+    <body>
+      <a href="#">google</a>
+      <a href="#">google</a>
+      <a href="#">google</a>
+      <a href="#">google</a>
+      <a href="#">google</a>
+      <a href="#">google</a>
+            
+                      
+    </body>
+    <script>
+        var body = document.getElementsByTagName('a');
+        for (var i=0; i <body.length; i++) {
+          (function(i){
+        body[i].addEventListener ("click", function() {
+          alert("hi"+i);
+        },'false');
+          })(i);
+          
+      }   
+             
+    </script>
+</html>
+
